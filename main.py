@@ -46,8 +46,6 @@ def get_random_color():
 
 def get_xingzuo():
   xingzuo = requests.get("http://web.juhe.cn:8080/constellation/getAll?consName=%E6%91%A9%E7%BE%AF%E5%BA%A7&type=today&key=5d4c067629b359a72ee6c0c2008ccf3d")
-  if xingzuo.status_code !=200:
-    return get_xingzuo()
   return json.loads(xingzuo.text)
 
 
