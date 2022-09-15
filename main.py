@@ -6,7 +6,6 @@ import requests
 import os
 import random
 
-
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
@@ -43,9 +42,6 @@ def get_words():
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
-
-
-
 
 
 client = WeChatClient(app_id, app_secret)
