@@ -45,10 +45,10 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 def get_xingzuo():
-  xingzuo = requests.get("http://web.juhe.cn/constellation/getAll?consName=%E6%B0%B4%E7%93%B6%E5%BA%A7&type=today&key=5d4c067629b359a72ee6c0c2008ccf3d")
+  xingzuo = requests.get("http://web.juhe.cn/constellation/getAll?consName=%E5%A4%84%E5%A5%B3%E5%BA%A7&type=today&key=5d4c067629b359a72ee6c0c2008ccf3d")
   return xingzuo.json()['summary']
 def get_xingzuo1(x):
-  xingzuo = requests.get("http://web.juhe.cn/constellation/getAll?consName=%E6%B0%B4%E7%93%B6%E5%BA%A7&type=today&key=5d4c067629b359a72ee6c0c2008ccf3d")
+  xingzuo = requests.get("http://web.juhe.cn/constellation/getAll?consName=%E5%A4%84%E5%A5%B3%E5%BA%A7&type=today&key=5d4c067629b359a72ee6c0c2008ccf3d")
   return xingzuo.json()[x]
 
 client = WeChatClient(app_id, app_secret)
