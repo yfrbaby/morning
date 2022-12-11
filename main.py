@@ -14,7 +14,8 @@ birthday = os.environ['BIRTHDAY']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
-
+user_id2 = os.environ["USER_ID2"]
+template_id2 = os.environ["TEMPLATE_ID2"]
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
@@ -66,3 +67,4 @@ res = wm.send_template(user_id, template_id, data)
 print(res)
 data2 = {'QFriend':{'value':get_xingzuo3('QFriend')},'number':{'value':get_xingzuo3('number')},'money':{'value':get_xingzuo3('money')},'work':{'value':get_xingzuo3('work')},'love':{'value':get_xingzuo3('love')},'health':{'value':get_xingzuo3('health')},'luckycolor':{'value':get_xingzuo3('color')},"summary":{'value':get_xingzuo2(), "color":get_random_color()},"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 res2 = wm.send_template(user_id2, template_id2, data2)
+print(res2)
