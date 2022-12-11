@@ -13,7 +13,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
       with:
-        ref: try
+        ref: master
 
     - name: sender
       uses: actions/setup-python@v2
