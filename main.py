@@ -61,10 +61,10 @@ def get_xingzuo3(x):
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
-wea, temperature = get_weather()
-data = {'QFriend':{'value':get_xingzuo1('QFriend')},'number':{'value':get_xingzuo1('number')},'money':{'value':get_xingzuo1('money')},'work':{'value':get_xingzuo1('work')},'love':{'value':get_xingzuo1('love')},'health':{'value':get_xingzuo1('health')},'luckycolor':{'value':get_xingzuo1('color')},"summary":{'value':get_xingzuo(), "color":get_random_color()},"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
+
+data = {'QFriend':{'value':get_xingzuo1('QFriend')},'number':{'value':get_xingzuo1('number')},'money':{'value':get_xingzuo1('money')},'work':{'value':get_xingzuo1('work')},'love':{'value':get_xingzuo1('love')},'health':{'value':get_xingzuo1('health')},'luckycolor':{'value':get_xingzuo1('color')},"summary":{'value':get_xingzuo(), "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
-data2 = {'QFriend':{'value':get_xingzuo3('QFriend')},'number':{'value':get_xingzuo3('number')},'money':{'value':get_xingzuo3('money')},'work':{'value':get_xingzuo3('work')},'love':{'value':get_xingzuo3('love')},'health':{'value':get_xingzuo3('health')},'luckycolor':{'value':get_xingzuo3('color')},"summary":{'value':get_xingzuo2(), "color":get_random_color()},"weather":{"value":wea},"temperature":{"value":temperature},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
+data2 = {'QFriend':{'value':get_xingzuo3('QFriend')},'number':{'value':get_xingzuo3('number')},'money':{'value':get_xingzuo3('money')},'work':{'value':get_xingzuo3('work')},'love':{'value':get_xingzuo3('love')},'health':{'value':get_xingzuo3('health')},'luckycolor':{'value':get_xingzuo3('color')},"summary":{'value':get_xingzuo2(), "color":get_random_color()},"love_days":{"value":get_count(), "color":get_random_color()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 res2 = wm.send_template(user_id2, template_id2, data2)
 print(res2)
